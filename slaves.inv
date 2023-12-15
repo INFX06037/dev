@@ -1,0 +1,4 @@
+192.168.0.103 ansible_user=ec2-user
+192.168.0.194 ansible_user=ec2-user
+192.168.0.239 ansible_user=ec2-user
+192.168.0.148 ansible_user=ec2-user

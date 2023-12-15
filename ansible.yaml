@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: ensure httpd is at the latest version
+      yum: name=httpd state=latest
+    - name: start httpd
+      service:
+          name: httpd
+          state: started
+
+- name: install and start docker in ec2 instances
+  hosts: all
+  become: yes
+  tasks:
+  - name: install docker
+    yum:
+      name: docker
+      state: present
+  - name: start docker
+    service:
+      name: docker
+      state: started
